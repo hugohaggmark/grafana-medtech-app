@@ -21,6 +21,10 @@
   },
   "includes": [
     {
+      "name": "Grafana Medtech panel",
+      "type": "panel"
+    },
+    {
       "type": "page",
       "name": "Page One",
       "path": "/a/%PLUGIN_ID%/one",

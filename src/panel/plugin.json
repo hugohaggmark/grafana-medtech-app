@@ -1,0 +1,15 @@
+{
+  "id": "grafana-medtech-panel",
+  "info": {
+    "author": {
+      "name": "Grafana"
+    },
+    "description": "Grafana Medtech panel",
+    "logos": {
+      "large": "img/logo.svg",
+      "small": "img/logo.svg"
+    }
+  },
+  "name": "Grafana Medtech Panel",
+  "type": "panel"
+}
