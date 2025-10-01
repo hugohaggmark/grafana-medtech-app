@@ -66,7 +66,6 @@ const config = async (env: Env): Promise<Configuration> => {
     mode: env.production ? 'production' : 'development',
 
     module: {
-      noParse: [/(codecs)/],
       rules: [
         // This must come first in the rules array otherwise it breaks sourcemaps.
         {
@@ -121,10 +120,6 @@ const config = async (env: Env): Promise<Configuration> => {
           generator: {
             filename: Boolean(env.production) ? '[hash][ext]' : '[file]',
           },
-        },
-        {
-          test: /\.wasm/,
-          type: 'asset/resource',
         },
       ],
     },
@@ -236,7 +231,6 @@ const config = async (env: Env): Promise<Configuration> => {
       // handle resolving "rootDir" paths
       modules: [path.resolve(process.cwd(), 'src'), 'node_modules'],
       unsafeCache: true,
-      fallback: { fs: false, path: require.resolve('path-browserify') },
     },
   };
 
